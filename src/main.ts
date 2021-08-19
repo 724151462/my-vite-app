@@ -5,7 +5,7 @@ import vuex from "./store";
 
 import { get, post } from "./api";
 
-import { Button } from "vant";
+import { Button, Tab, Tabs } from "vant";
 
 console.log(router);
 
@@ -14,6 +14,8 @@ const app = createApp(App);
 app.config.globalProperties.$get = get;
 app.config.globalProperties.$post = post;
 app.use(Button);
+app.use(Tabs);
+app.use(Tab);
 app.use(router);
 app.use(vuex);
 app.mount("#app");
